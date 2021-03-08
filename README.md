@@ -14,5 +14,4 @@ si es de 2 manos.
 
 ![Inventario de ejemplo (Barbaro)](inventario.jpg)
 
-Voy a intentar resolver este sistema de diferentes armas con interfaces, y el inventario lo intentaré crear usando mapas.
-A medida que desarrolle el proyecto puede que cree un UML para entenderlo mejor.
+Voy a intentar resolver este sistema de diferentes armas con interfaces. A medida que desarrolle el proyecto puede que cree un UML para entenderlo mejor, también es importante destacar que este es un proyecto independiente en el cual voy a trabajar en mi tiempo libre.
