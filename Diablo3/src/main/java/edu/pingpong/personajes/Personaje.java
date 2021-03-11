@@ -1,4 +1,6 @@
-package edu.pingpong;
+package edu.pingpong.personajes;
+
+import edu.pingpong.armas.Arma;
 
 public interface Personaje {
     void equiparArmaDerecha(Arma arma);
