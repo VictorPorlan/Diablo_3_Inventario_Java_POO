@@ -67,6 +67,6 @@ public class Barbaro implements Personaje{
     public String toString(){
         return "Nombre: " + getNombre() + '\n' +
                 "Mano Derecha: " + getNombreManoDerecha() + '\n'+
-                "Mano Izquierda" + getNombreManoIzquierda() + '\n';
+                "Mano Izquierda: " + getNombreManoIzquierda() + '\n';
     }
 }

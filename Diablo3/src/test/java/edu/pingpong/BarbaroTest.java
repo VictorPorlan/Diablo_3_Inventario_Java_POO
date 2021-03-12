@@ -6,6 +6,7 @@ import edu.pingpong.armas.Espada;
 import edu.pingpong.personajes.Barbaro;
 import edu.pingpong.personajes.Personaje;
 import org.junit.Before;
+import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 
@@ -14,6 +15,7 @@ public class BarbaroTest {
     Arma espada1;
     Arma espada2;
     Arma arco;
+
     @Before
     public void setUpBarbaro(){
          barbaro = new Barbaro("Víctor");
@@ -21,10 +23,36 @@ public class BarbaroTest {
          espada2 = new Espada(30,"Espada curva", true);
          arco = new Arco(20,"Arco curvo", false);
     }
+
+    @Test
     public void equiparArmaDerechaBienTest(){
         barbaro.equiparArmaDerecha(espada1);
         assertEquals("Nombre: " + "Víctor" + '\n' +
-                "Mano Derecha: " + "Espada Larga" + '\n'+
-                "Mano Izquierda" + "Mano vacia" + '\n',barbaro.toString());
+                "Mano Derecha: " + "Espada larga" + '\n'+
+                "Mano Izquierda: " + "Mano vacia" + '\n',barbaro.toString());
+    }
+
+    @Test
+    public void equiparArmaDerechaErrorTest(){
+        barbaro.equiparArmaDerecha(arco);
+        assertEquals("Nombre: " + "Víctor" + '\n' +
+                "Mano Derecha: " + "Mano vacia" + '\n'+
+                "Mano Izquierda: " + "Mano vacia" + '\n',barbaro.toString());
+    }
+
+    @Test
+    public void equiparArmaIzquierdaBienTest(){
+        barbaro.equiparArmaIzquierda(espada1);
+        assertEquals("Nombre: " + "Víctor" + '\n' +
+                "Mano Derecha: " + "Mano vacia" + '\n'+
+                "Mano Izquierda: " + "Espada larga" + '\n',barbaro.toString());
+    }
+
+    @Test
+    public void equiparArmaIzquierdaErrorTest(){
+        barbaro.equiparArmaIzquierda(arco);
+        assertEquals("Nombre: " + "Víctor" + '\n' +
+                "Mano Derecha: " + "Mano vacia" + '\n'+
+                "Mano Izquierda: " + "Mano vacia" + '\n',barbaro.toString());
     }
 }
