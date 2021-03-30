@@ -24,8 +24,18 @@ public class CreadorPersonajes
         /** Comprobamos sus armas equipadas*/
         System.out.println(barbaro.toString());
 
+        /** Le equipamos un arma en la mano izquierda inválida y comprobamos si funciona*/
+
         barbaro.equiparArmaIzquierda(arco);
 
         System.out.println(barbaro.toString());
+
+        /**Le equipamos un arma en la mano izquierda válida y comprobamos*/
+        barbaro.equiparArmaIzquierda(espada2);
+
+        System.out.println(barbaro.toString());
+
+        /** Atacamos y comprobamos si su daño se suma correctamente*/
+        System.out.println("El ataque hace " + barbaro.atacar() + " de daño");
     }
 }
